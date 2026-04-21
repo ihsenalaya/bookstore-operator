@@ -1,0 +1,28 @@
+BookStore Operator {{ .Chart.AppVersion }} installé avec succès dans le namespace "{{ .Release.Namespace }}".
+
+Controller manager :
+  kubectl get deployment {{ include "bookstore-operator.fullname" . }}-controller-manager -n {{ .Release.Namespace }}
+
+CRD installée :
+  kubectl get crd bookstores.store.mylab.local
+
+Créer un BookStore :
+  kubectl apply -f - <<EOF
+  apiVersion: store.mylab.local/v1alpha1
+  kind: BookStore
+  metadata:
+    name: my-bookstore
+    namespace: default
+  spec:
+    name: central-bookstore
+    replicas: 2
+    image: nginx:1.25
+    port: 80
+  EOF
+
+Suivre le statut :
+  kubectl get bookstores -A
+
+NOTE: Les CRDs dans le dossier crds/ sont installées par Helm mais ne sont pas
+mises à jour automatiquement lors d'un "helm upgrade". Pour mettre à jour la CRD,
+utilisez: kubectl apply -f charts/bookstore-operator/crds/bookstores.yaml

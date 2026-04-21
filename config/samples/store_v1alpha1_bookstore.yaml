@@ -1,0 +1,9 @@
+apiVersion: store.mylab.local/v1alpha1
+kind: BookStore
+metadata:
+  name: bookstore-sample
+spec:
+  name: central-bookstore
+  replicas: 2
+  image: nginx:1.25
+  port: 80

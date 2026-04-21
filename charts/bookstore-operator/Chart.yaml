@@ -1,0 +1,12 @@
+apiVersion: v2
+name: bookstore-operator
+description: Helm chart for the BookStore Kubernetes Operator built with Kubebuilder
+type: application
+version: 0.1.0
+appVersion: "v1"
+keywords:
+  - bookstore
+  - operator
+  - kubebuilder
+maintainers:
+  - name: ihsenalaya

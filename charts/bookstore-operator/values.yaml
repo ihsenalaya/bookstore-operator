@@ -1,0 +1,33 @@
+replicaCount: 1
+
+image:
+  repository: ihsenalaya/bookstore-operator
+  tag: v1
+  pullPolicy: IfNotPresent
+
+imagePullSecrets: []
+
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  create: true
+  annotations: {}
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 128Mi
+  requests:
+    cpu: 10m
+    memory: 64Mi
+
+leaderElect: true
+
+metrics:
+  enabled: true
+  port: 8443
+
+nodeSelector: {}
+tolerations: []
+affinity: {}
