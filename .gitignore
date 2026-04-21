@@ -28,3 +28,9 @@ go.work
 
 # Kubeconfig might contain secrets
 *.kubeconfig
+
+# Claude Code settings
+.claude/
+
+# Helm chart tarballs (built artifacts)
+*.tgz
