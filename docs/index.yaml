@@ -1,0 +1,20 @@
+apiVersion: v1
+entries:
+  bookstore-operator:
+  - apiVersion: v2
+    appVersion: v1
+    created: "2026-04-21T08:56:27.603354702+02:00"
+    description: Helm chart for the BookStore Kubernetes Operator built with Kubebuilder
+    digest: 9b673efb3447510179dd820628d6c3d8f7fb3a3396921678c54ceeb15a28c60b
+    keywords:
+    - bookstore
+    - operator
+    - kubebuilder
+    maintainers:
+    - name: ihsenalaya
+    name: bookstore-operator
+    type: application
+    urls:
+    - https://ihsenalaya.github.io/bookstore-operator/bookstore-operator-0.1.0.tgz
+    version: 0.1.0
+generated: "2026-04-21T08:56:27.602653858+02:00"
